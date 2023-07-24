@@ -1,4 +1,4 @@
-# from inspect import signature
+from inspect import signature
 from random import randint
 from faker import Faker
 
@@ -8,15 +8,17 @@ def rand_ratio():
 
 
 fake = Faker('pt_BR')
-# print(signature(fake.random_number))
+print(signature(fake.random_number))
 
 
 def make_recipe():
+
+    print("passou make_recipe")
     return {
         'title': fake.sentence(nb_words=6),
         'description': fake.sentence(nb_words=12),
         'preparation_time': fake.random_number(digits=2, fix_len=True),
-        'preparation_time_unit': 'Minutos',
+        'preparation_time_unit': 'Minutosssss',
         'servings': fake.random_number(digits=2, fix_len=True),
         'servings_unit': 'Porção',
         'preparation_steps': fake.text(3000),
